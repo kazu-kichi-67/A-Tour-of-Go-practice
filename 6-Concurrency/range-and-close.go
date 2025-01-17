@@ -10,7 +10,7 @@ func fibonacci(n int, c chan int) {
 		c <- x
 		x, y = y, x+y
 	}
-	// close(c)
+	close(c)
 }
 
 func main() {
